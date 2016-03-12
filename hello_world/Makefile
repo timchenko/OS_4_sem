@@ -1,5 +1,5 @@
 all: hello_world
 clean: 
-	rm ./hello_world
+	rm -f hello_world
 hello_world: hello_world.c
-	gcc hello_world.c -o hello_world
+	gcc -std=c11 hello_world.c -o hello_world
