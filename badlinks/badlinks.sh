@@ -1,2 +1,3 @@
 #!/bin/sh
-find -L -type l -mmin +$(( 7*24*60 ))
+find -L -type l -mtime +7
+
