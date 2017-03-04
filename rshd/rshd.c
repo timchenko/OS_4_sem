@@ -77,8 +77,9 @@ void daemonize()
 				handle_error("write rshd.pid error")
 			shift += wr_len;
 		}
-		waitpid(
 		close(file);
+		int pid_status;
+		waitpid(pid, &pid_status, 0);
 		exit(0);
 	}
 }
